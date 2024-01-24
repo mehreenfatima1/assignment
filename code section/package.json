@@ -1,0 +1,20 @@
+{
+  "name": "class-lessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day1.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "mehreen": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
