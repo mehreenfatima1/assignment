@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>User Data</h2>
+<ul>
+  <% userData.forEach(user => { %>
+    <li>
+      <strong>Name:</strong> <%= user.Firstname %> <%= user.Lastname %><br>
+      <a href="/edit/<%= user._id %>">Edit</a>
+      <a href="/delete/<%= user._id%>">Delete</a>
+      <hr>
+    </li>
+  <% }) %>
+</ul>
+
+</body>
+</html>
