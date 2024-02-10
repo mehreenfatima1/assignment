@@ -1,0 +1,11 @@
+{
+  "name": "external-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mehreen": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
