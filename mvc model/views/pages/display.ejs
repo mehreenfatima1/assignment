@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../includes/style')%>
+</head>
+<body>
+    <div class="container">
+    <h1>User Data</h1>
+    <table>
+       <tr> <th>User Id</th><th>User Name</th></tr>
+<% user.forEach(user=> {%>
+<tr><td><%= user.id%></td><td><%= user.name%></td>
+<td><a href="/edit/<%= user.id %>">Edit Infromation</a></td>
+<td><a href="/delete/<%=user.id%>">Delete Registration</a></td>
+</tr>
+    
+
+<%})%>
+</table>
+<a href="/home">Add a user</a>
+</div>
+</body>
+</html>
