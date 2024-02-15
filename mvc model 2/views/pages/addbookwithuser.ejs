@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container py-3">
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th>Name of the User</th>
+                    <th>No. of Books Issued</th>
+                    <th>Name of Books Issued</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td><%= user.name %></td>
+                        <td><%= user.book.length %></td>
+                        <td>
+                            <% user.book.forEach(book => { %>
+                                <%= book.name %> 
+                                <br>
+                            <% }) %>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/displaybooknuser">Go to the Book List</a>
+        
+</body>
+</html>

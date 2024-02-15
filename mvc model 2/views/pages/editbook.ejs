@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Data</h1>
+        <form action="/editbook/<%= bookData.id %>" method="post">
+            <input type="text" name="name" placeholder="<%= bookData.name%>"><br>
+            <input type="text"name="author" placeholder="<%= bookData.author%>"><br>
+            <input type="text" name="genre" placeholder="<%= bookData.genre %>"><br>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

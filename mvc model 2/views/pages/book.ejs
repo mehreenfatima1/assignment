@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container py-3">
+        <header class="text-center">
+            <h1 class="display-6">Book Information</h1>
+        </header>
+        <section class="container">
+            <form class="row g-3" form action="/addbook" method="post">
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" name="name" placeholder="Bookname" aria-label="name">
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" name="author" placeholder="Author" aria-label="author">
+                    </div>
+
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" name="genre" placeholder="Genre" aria-label="genre">
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="container">
+
+        <div class="row g-3">
+            <a href="/displaybooknuser" class="btn btn-primary">Go the the Book list</a>
+            <a href="/" class="btn btn-primary">Add User</a>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

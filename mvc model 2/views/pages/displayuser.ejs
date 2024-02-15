@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Data</h1>
+        <table>
+            <thead><tr> <th>User Id</th><th>User Name</th></tr></thead>
+    <% user.forEach(user=> {%>
+    <tbody><tr><td><%= user.id%></td><td><%= user.name%></td>
+    <td><a href="/edituser/<%= user.id %>">Edit Information</a></td>
+    <td><a href="/deleteuser/<%=user.id%>">Delete Registration</a></td>
+    </tr></tbody>                                               
+
+    <%})%>
+    </table>
+    <a href="/displaybooknuser">Go the the Book list</a>
+    <a href="/addbook">Add a book</a>
+    <a href="/">Add a user</a>
+</body>
+</html>

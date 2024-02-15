@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+     <div class="container py-3">
+        <form action="/displaybooknuser" method="post">
+        <header class="text-center"><h2 class="display-6">Users</h2></header>
+        <div class="dropdown">
+            <label for="user" class="display-6">Choose a user</label>
+            
+                 <select name="user" id="user" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <% user.forEach(users=>{%>
+                        <option value="<%=users.id%>"> <%=users.name%></option>
+                  <%})%>
+            </select>
+            
+        </div>
+        <a href="/" class="btn btn-primary">Add a user</a>
+    
+        <h2 class="display-6">Book List</h2>
+        <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>Book Name</th>
+                <th>Book Author</th>
+                <th>Book Genre</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% book.forEach(book => { %>
+                <tr>
+                  <td><input type="checkbox" name="book" value="<%= book.id %>"></td>
+                  <td><%= book.name %></td>
+                  <td><%= book.author %></td>
+                  <td><%= book.genre %></td>
+                  <td><a href="/editbook/<%= book.id %>">Edit</a></td>
+                  <td><a href="/delbook/<%= book.id %>">Del</a></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <button class="btn btn-primary" type="submit">Add</button>
+        
+    </form>
+ </div>
+    
+</body>
+</html>
