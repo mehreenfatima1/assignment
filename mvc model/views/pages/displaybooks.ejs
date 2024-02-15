@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../includes/style')%>
+</head>
+<body>
+    <div class="container">
+        <h1>Book List</h1>
+        <table>
+           <tr> <th>Book Id</th><th>Book Name</th></tr>
+    <% book.forEach(books=> {%>
+    <tr><td><%= books.id%></td><td><%= books.name%></td>
+    <td><a href="/editbook/<%= books.id %>">Edit</a></td>
+    <td><a href="/deletebook/<%=books.id%>">Delete</a></td>
+    </tr>
+        
+    
+    <%})%>
+</table>
+    <a href="/bookinput">Add a book</a>
+    </div>
+</ul>
+</div>
+</body>
+</html>
